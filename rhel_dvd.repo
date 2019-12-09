@@ -1,0 +1,5 @@
+[rhel--server-dvd]
+baseurl = http://content.example.com/rhel7.6/x86_64/dvd
+enabled = true
+gpgcheck = false
+name = Red Hat Enterprise Linux 7.6 Server (dvd)
