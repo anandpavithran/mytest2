@@ -12,8 +12,8 @@ RUN chmod +x /tmp/a.sh
 #RUN yum clean all --disableplugin=subscription-manager -y
 ADD index.html /var/www/html/
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
-RUN chgrp -R 0 /var/log/httpd /var/run/httpd /var/www/html && \ 
-    chmod -R g=u /var/log/httpd /var/run/httpd /var/www/html
+RUN chown -R anand:0 /etc/httpd/ /var/log/httpd /var/run/httpd /var/www/html && \ 
+    chmod -R g=u /etc/httpd /var/log/httpd /var/run/httpd /var/www/html
 USER anand
 CMD bash -c "/usr/sbin/httpd -DFOREGROUND"
 
