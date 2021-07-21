@@ -6,7 +6,8 @@ ENV "VAR2=grape"
 EXPOSE 8080
 #RUN yum install -y --no-docs --disableplugin=subscription-manager httpd
 RUN yum install -y httpd && yum install net-tools -y && yum install bind-utils -y && yum install iputils -y
-RUN echo "echo ${TEST2_PORT_8080_TCP_ADDR}" >> /tmp/a.sh
+RUN echo "echo \${TEST2_PORT_8080_TCP_ADDR}" >> /tmp/a.sh
+RUN chmod +x /tmp/a.sh
 #RUN yum clean all --disableplugin=subscription-manager -y
 ADD index.html /var/www/html/
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
