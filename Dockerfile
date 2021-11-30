@@ -5,7 +5,7 @@ ENV "VAR1=apple"
 ENV "VAR2=grape"
 EXPOSE 8080
 #RUN yum install -y --no-docs --disableplugin=subscription-manager httpd
-RUN yum install -y httpd && yum install net-tools -y && yum install bind-utils -y && yum install iputils -y
+RUN yum install -y httpd && yum install net-tools -y && yum install bind-utils -y && yum install iputils -y && yum install traceroute -y
 RUN echo "echo \${TEST2_PORT_8080_TCP_ADDR}" >> /tmp/a.sh
 RUN chmod +x /tmp/a.sh
 #RUN yum clean all --disableplugin=subscription-manager -y
