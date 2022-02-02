@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi:8.0
 MAINTAINER ANANDPAVITHRAN <apavithr@redhat.com>
-LABEL "Demo of webserver"
+LABEL "Demo=webserver"
 ENV "VAR1=apple"
 ENV "VAR2=grape"
 EXPOSE 8080
