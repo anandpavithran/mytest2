@@ -1,7 +1,8 @@
 FROM registry.access.redhat.com/ubi8/ubi:8.0
 MAINTAINER ANANDPAVITHRAN<apavithr@redhat.com>
 ENV VAR1=apple\
-     VAR2=grape
+     VAR2=grape\
+     VAR3=ibm
 EXPOSE 8080
 #RUN yum install -y --no-docs --disableplugin=subscription-manager httpd
 RUN yum install -y httpd && yum install net-tools -y && yum install bind-utils -y && yum install iputils -y 
