@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.0
+FROM registry.access.redhat.com/ubi9
 MAINTAINER ANANDPAVITHRAN<apavithr@redhat.com>
 ENV VAR1=apple\
      VAR2=grape\
