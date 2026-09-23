@@ -5,7 +5,7 @@ ENV VAR1=apple\
      VAR3=ibm
 EXPOSE 8080
 #RUN yum install -y --no-docs --disableplugin=subscription-manager httpd
-RUN yum install -y httpd && yum install net-tools -y && yum install bind-utils -y && yum install iputils -y 
+RUN dnf install -y httpd && yum install net-tools -y && yum install bind-utils -y && yum install iputils -y 
 #RUN yum clean all --disableplugin=subscription-manager -y
 ADD index.html /var/www/html/
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
